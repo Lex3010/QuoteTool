@@ -1,0 +1,5 @@
+.login-buttons {
+    align-self: flex-end;
+    color: white;
+    flex-grow: 1;
+}

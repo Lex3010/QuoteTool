@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="navbar">
+    <meta charset="UTF-8">
+    <title>Welkom bij de offerte tool!</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../../../static/css/bootstrap.css" rel="stylesheet" th:href="@{/static/css/bootstrap.css}"/>
+    <link rel="stylesheet" th:href="@{/static/css/home.css}" />
+</head>
+<body>
+<th:block th:include="fragments/header/header"></th:block>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/info">OfferteTool</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/over-ons" tabindex="-1">Over ons</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a class="nav-link login-buttons right" href="/offerte-tool/gebruikers/nieuw" style="color: #ffffff">Inloggen</a>
+            </li>
+            <li>
+                <a class="nav-link login-buttons" href="/offerte-tool/gebruikers/nieuw" style="color: #ffffff">Registreren</a>
+            </li>
+            <li>
+                <a class="nav-link login-buttons" href="/offerte-tool/gebruikers/nieuw" style="color: #ffffff"><i class="fas fa-user"></i></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+</body>
+</html>
