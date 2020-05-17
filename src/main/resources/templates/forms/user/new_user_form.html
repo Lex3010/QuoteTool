@@ -5,9 +5,27 @@
     <title>Nieuwe OfferteTool Gebruiker Aanmaken</title>
 </head>
 <body>
-    <form action="#" th:action="@{/fooform}" th:object="${User}" method="post">
-        <label for="companyName">Bedrijfsnaam</label>
-        <input
-    </form>
+    <div class="container">
+        <form action="#" th:action="@{/offerte-tool/gebruikers/nieuw}" th:object="${user}" method="post">
+            <div class="form-group">
+                <label for="inputCompanyName">Bedrijfsnaam</label>
+                <input type="companyName" class="form-control" id="inputCompanyName" placeholder="Bedrijfsnaam">
+            </div>
+            <div class="form-group">
+                <label for="inputEmail">Email address</label>
+                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="E-mailadres">
+                <small id="emailHelp" class="form-text text-muted">We delen uw e-mailadres met niemand.</small>
+            </div>
+            <div class="form-group">
+                <label for="InputPassword">Password</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="termsAndConditionsCheck">
+                <label class="form-check-label" for="termsAndConditionsCheck">Ik ga akkoord met de voorwaarden</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 </body>
 </html>

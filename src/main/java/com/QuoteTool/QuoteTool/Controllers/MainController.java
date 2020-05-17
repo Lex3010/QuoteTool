@@ -1,4 +1,4 @@
-package com.QuoteTool.QuoteTool.Controllers;
+/*package com.QuoteTool.QuoteTool.Controllers;
 
 import com.QuoteTool.QuoteTool.Enums.UserRole;
 import com.QuoteTool.QuoteTool.Models.User;
@@ -17,7 +17,7 @@ public class MainController {
     @PostMapping(path = "/add")
     public @ResponseBody
     String addNewUser(@RequestParam String companyName, @RequestParam String email, @RequestParam UserRole role) {
-        User newUser = new User(companyName, email, role);
+       // User newUser = new User(companyName, email, role);
         userRepository.save(newUser);
         return "Saved";
     }
@@ -27,4 +27,4 @@ public class MainController {
     Iterable<User> getAllUsers() {
         return userRepository.findAll();
     }
-}
+}*/

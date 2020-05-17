@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Foooo</title>
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}"/>
 </head>
 <body>
-    barrrrrr
-
+    <th:block th:include="fragments/navbar/navbar"></th:block>
     <th:block th:include="forms/user/new_user_form"></th:block>
 </body>
 </html>
