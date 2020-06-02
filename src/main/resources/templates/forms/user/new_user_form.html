@@ -6,14 +6,14 @@
 </head>
 <body>
     <div class="container">
-        <form action="#" th:action="@{/offerte-tool/gebruikers/nieuw}" th:object="${user}" method="post">
+        <form th:action="@{/offerte-tool/gebruikers/registreren}" th:object="${user}" method="post">
             <div class="form-group">
                 <label for="inputCompanyName">Bedrijfsnaam</label>
-                <input type="companyName" class="form-control" id="inputCompanyName" placeholder="Bedrijfsnaam">
+                <input type="text" class="form-control" id="inputCompanyName" placeholder="Bedrijfsnaam" th:field="*{companyName}">
             </div>
             <div class="form-group">
-                <label for="inputEmail">Email address</label>
-                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="E-mailadres">
+                <label for="inputEmail">E-mailadres</label>
+                <input type="text" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="E-mailadres" th:field="*{email}">
                 <small id="emailHelp" class="form-text text-muted">We delen uw e-mailadres met niemand.</small>
             </div>
             <div class="form-group">
@@ -24,7 +24,7 @@
                 <input type="checkbox" class="form-check-input" id="termsAndConditionsCheck">
                 <label class="form-check-label" for="termsAndConditionsCheck">Ik ga akkoord met de voorwaarden</label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 </body>
