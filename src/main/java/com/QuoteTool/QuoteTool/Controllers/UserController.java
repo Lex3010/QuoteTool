@@ -16,17 +16,17 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping(path = "/offerte-tool/gebruikers/registreren")
-    public static String getNewUserPage(Model model) {
+    @GetMapping(path = "/users/new")
+    public String getNewUserPage(Model model) {
         model.addAttribute("user", new User());
         return "user/create_new_user";
     }
 
-    @PostMapping(path = "/offerte-tool/gebruikers/registreren")
-    public String createNewUser(@ModelAttribute User user, @RequestParam String companyName, @RequestParam String email, Long id) {
+    @PostMapping(path = "/users/register")
+    public String createNewUser(@ModelAttribute User user, @RequestParam String companyName, @RequestParam String email, @RequestParam String password, Long id) {
         System.out.println("foo");
         UserRole role = USER;
-        User newUser = new User(companyName, email, role, id);
+        User newUser = new User(companyName, email, password, USER, id);
         userRepository.save(newUser);
         return "foo";
     }

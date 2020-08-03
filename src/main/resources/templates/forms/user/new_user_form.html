@@ -6,7 +6,7 @@
 </head>
 <body>
     <div class="container">
-        <form th:action="@{/offerte-tool/gebruikers/registreren}" th:object="${user}" method="post">
+        <form th:action="@{/users/register}" th:object="${user}" method="post">
             <div class="form-group">
                 <label for="inputCompanyName">Bedrijfsnaam</label>
                 <input type="text" class="form-control" id="inputCompanyName" placeholder="Bedrijfsnaam" th:field="*{companyName}">
